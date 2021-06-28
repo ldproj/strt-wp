@@ -17,6 +17,7 @@ services:
     volumes:
       - $PWD/wp-app/:/var/www/html
       - $PWD/plugins/:/var/www/html/wp-content/plugins # Plugin development
+      - $PWD/mu-plugins/:/var/www/html/wp-content/mu-plugins # always run Plugin development
       - $PWD/themes/:/var/www/html/wp-content/themes # Theme development
       - $PWD/server1/startup.sh:/startup.sh # Performs task to update permission for mounted volumes
     entrypoint: /startup.sh
